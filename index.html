@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2307549b'/%3E%3Ctext x='50' y='45' font-size='20' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3Eजय%3C/text%3E%3Ctext x='50' y='68' font-size='20' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3Eभीम%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20180%20180%27%3E%3Cdefs%3E%20%3ClinearGradient%20id=%27bg%27%20x1=%270%27%20y1=%270%27%20x2=%271%27%20y2=%271%27%3E%3Cstop%20offset=%270%27%20stop-color=%27%230b2a52%27/%3E%3Cstop%20offset=%27.48%27%20stop-color=%27%231467b7%27/%3E%3Cstop%20offset=%271%27%20stop-color=%27%2335b9f3%27/%3E%3C/linearGradient%3E%20%3ClinearGradient%20id=%27shine%27%20x1=%270%27%20y1=%270%27%20x2=%270%27%20y2=%271%27%3E%3Cstop%20offset=%270%27%20stop-color=%27white%27%20stop-opacity=%27.42%27/%3E%3Cstop%20offset=%27.55%27%20stop-color=%27white%27%20stop-opacity=%27.06%27/%3E%3Cstop%20offset=%271%27%20stop-color=%27white%27%20stop-opacity=%270%27/%3E%3C/linearGradient%3E%20%3Cfilter%20id=%27shadow%27%3E%3CfeDropShadow%20dx=%270%27%20dy=%277%27%20stdDeviation=%278%27%20flood-opacity=%27.28%27/%3E%3C/filter%3E%3C/defs%3E%3Crect%20x=%278%27%20y=%278%27%20width=%27164%27%20height=%27164%27%20rx=%2742%27%20fill=%27url(%23bg)%27%20filter=%27url(%23shadow)%27/%3E%3Cpath%20d=%27M18%2048Q18%2018%2048%2018H132Q162%2018%20162%2048V70H18Z%27%20fill=%27url(%23shine)%27/%3E%3Ccircle%20cx=%2790%27%20cy=%2792%27%20r=%2739%27%20fill=%27none%27%20stroke=%27%23f0c85a%27%20stroke-width=%275%27%20opacity=%27.98%27/%3E%3Ccircle%20cx=%2790%27%20cy=%2792%27%20r=%277%27%20fill=%27%23f0c85a%27/%3E%3Cg%20stroke=%27%23f0c85a%27%20stroke-width=%273%27%20stroke-linecap=%27round%27%20opacity=%27.95%27%3E%20%3Cpath%20d=%27M90%2053V70M90%20114V131M51%2092H68M112%2092H129M62.5%2064.5L74.5%2076.5M105.5%20107.5L117.5%20119.5M117.5%2064.5L105.5%2076.5M74.5%20107.5L62.5%20119.5%27/%3E%3C/g%3E%3Ctext%20x=%2790%27%20y=%27151%27%20text-anchor=%27middle%27%20font-family=%27Arial,sans-serif%27%20font-size=%2718%27%20font-weight=%27800%27%20fill=%27white%27%20letter-spacing=%271%27%3EBMW517%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="icons/icon-apple-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BMW517">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0b2a52">
 
@@ -657,6 +660,43 @@
   }
   .share-toast.show{opacity:1;transform:translate(-50%,0);}
 
+
+
+  /* ============ BMW517 POST-REGISTRATION HOME WELCOME ============ */
+  .home-welcome-section{padding:0 18px 34px;background:var(--page-bg,#061d33);}
+  .home-welcome-section.hidden{display:none!important;}
+  .home-welcome-inner{max-width:920px;margin:0 auto;}
+  .home-welcome-card{margin:0!important;animation:bmwWelcomeIn .65s cubic-bezier(.2,.8,.2,1) both;}
+  .home-welcome-success{
+    display:inline-block;margin:12px auto 4px;padding:9px 15px;border-radius:999px;
+    background:rgba(28,157,221,.10);border:1px solid rgba(28,157,221,.20);
+    color:#17618d;font-weight:800;font-size:14px;
+  }
+  @keyframes bmwWelcomeIn{
+    from{opacity:0;transform:translateY(18px) scale(.985)}
+    to{opacity:1;transform:translateY(0) scale(1)}
+  }
+  @media(max-width:480px){
+    .home-welcome-section{padding:0 12px 28px;}
+    .home-welcome-success{font-size:12px;padding:8px 11px;}
+  }
+
+  /* ============ BMW517 GLASS SHARE UI ============ */
+  .nav-share-btn,.fab-share{-webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none;}
+  .nav-share-btn{position:relative;overflow:hidden;isolation:isolate;min-height:42px;padding:8px 14px;border-radius:16px!important;border:1px solid rgba(255,255,255,.28)!important;background:linear-gradient(145deg,rgba(255,255,255,.20),rgba(255,255,255,.07))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 8px 24px rgba(0,0,0,.14);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);}
+  .nav-share-btn::before,.fab-share::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.32) 48%,transparent 70%);transform:translateX(-120%);transition:transform .55s ease;pointer-events:none;}
+  .nav-share-btn:hover::before,.fab-share:hover::before{transform:translateX(120%);}
+  .fab-share{width:62px!important;height:62px!important;right:18px!important;bottom:18px!important;border-radius:22px!important;font-size:0!important;overflow:hidden;isolation:isolate;border:1px solid rgba(255,255,255,.42)!important;background:radial-gradient(circle at 28% 18%,rgba(255,255,255,.42),transparent 28%),linear-gradient(145deg,rgba(28,159,217,.72),rgba(11,42,82,.82))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.48),inset 0 -10px 22px rgba(0,20,50,.18),0 14px 34px rgba(11,42,82,.30)!important;backdrop-filter:blur(22px) saturate(170%);-webkit-backdrop-filter:blur(22px) saturate(170%);transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease;}
+  .fab-share .share-glass-icon{position:relative;z-index:2;width:30px;height:30px;display:grid;place-items:center;color:#fff;filter:drop-shadow(0 2px 5px rgba(0,0,0,.25));}
+  .fab-share .share-glass-icon svg{width:30px;height:30px;display:block;}
+  .fab-share:hover{transform:translateY(-4px) scale(1.045)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -10px 22px rgba(0,20,50,.16),0 20px 42px rgba(11,42,82,.36)!important;}
+  .fab-share:active{transform:scale(.94)!important;}
+  .share-panel{background:linear-gradient(145deg,rgba(255,255,255,.90),rgba(244,250,255,.78))!important;border:1px solid rgba(255,255,255,.82)!important;box-shadow:0 24px 70px rgba(6,35,64,.30),inset 0 1px 0 rgba(255,255,255,.9)!important;backdrop-filter:blur(26px) saturate(150%);-webkit-backdrop-filter:blur(26px) saturate(150%);}
+  .share-opt{border:1px solid rgba(210,224,238,.9)!important;background:rgba(255,255,255,.62)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 8px 22px rgba(11,42,82,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+  .share-opt:active{transform:scale(.97)!important;}
+  @media(max-width:600px){.fab-share{width:58px!important;height:58px!important;right:14px!important;bottom:14px!important;border-radius:20px!important;}.fab-share .share-glass-icon,.fab-share .share-glass-icon svg{width:28px;height:28px;}}
+  @media(prefers-reduced-motion:reduce){.nav-share-btn::before,.fab-share::before{display:none;}}
+
   /* ============ AI ASSISTANT CHAT ============ */
   .ai-section{
     background:linear-gradient(180deg,#eef5fc,var(--bg));
@@ -795,59 +835,6 @@
   }
 
 
-  /* ============ SECURE OTP LOGIN ============ */
-  body.auth-locked{overflow:hidden;}
-  .app-locked{visibility:hidden;pointer-events:none;height:100vh;overflow:hidden;}
-  .app-locked.auth-ready{visibility:visible;pointer-events:auto;height:auto;overflow:visible;}
-  .otp-login-overlay{
-    position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;
-    padding:18px;background:radial-gradient(circle at 20% 10%,rgba(28,159,217,.28),transparent 42%),
-    linear-gradient(135deg,#06182f,#0b2a52 55%,#0d5aa7);
-    overflow:auto;
-  }
-  .otp-login-overlay.hidden{display:none;}
-  .otp-login-card{
-    width:min(440px,100%);background:rgba(255,255,255,.98);border-radius:28px;padding:30px 26px;
-    box-shadow:0 28px 90px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.35);
-    animation:loginCardIn .45s ease both;
-  }
-  @keyframes loginCardIn{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
-  .otp-brand,.reg-brand{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
-  .otp-brand-mark,.reg-brand-icon{
-    width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:25px;
-    background:linear-gradient(135deg,var(--navy),var(--azure));color:#fff;
-    box-shadow:0 8px 20px rgba(13,90,167,.25);
-  }
-  .otp-brand strong{display:block;font:800 20px 'Poppins',sans-serif;color:var(--navy);}
-  .otp-brand span{display:block;font:500 11px 'Poppins',sans-serif;color:var(--ink-soft);}
-  .otp-icon{width:64px;height:64px;border-radius:20px;background:#eaf5ff;display:grid;place-items:center;font-size:30px;margin:4px auto 16px;}
-  .otp-login-card h2{text-align:center;color:var(--navy);font-size:25px;margin-bottom:7px;}
-  .otp-sub{text-align:center;color:var(--ink-soft);font-size:13.5px;margin:0 auto 24px;line-height:1.65;}
-  .otp-login-card label{display:block;color:var(--navy);font-weight:800;font-size:13px;margin:12px 0 7px;}
-  .phone-input-wrap{display:flex;align-items:center;border:1.5px solid #d7e0eb;border-radius:14px;background:#fff;overflow:hidden;}
-  .phone-input-wrap span{padding:13px 10px 13px 13px;background:#f5f8fc;font-weight:700;color:var(--navy);font-size:14px;}
-  .phone-input-wrap input{border:0!important;border-radius:0!important;padding:13px!important;box-shadow:none!important;}
-  .otp-login-card input{width:100%;border:1.5px solid #d7e0eb;border-radius:14px;padding:13px 14px;font:500 16px 'Poppins',sans-serif;color:var(--ink);}
-  .otp-login-card input:focus{outline:none;border-color:var(--azure);box-shadow:0 0 0 4px rgba(28,159,217,.10);}
-  .otp-code-input{text-align:center;letter-spacing:8px;font-size:22px!important;font-weight:700!important;}
-  .otp-primary-btn,.otp-secondary-btn{
-    width:100%;border:0;border-radius:14px;padding:13px 16px;margin-top:14px;font:800 14px 'Noto Sans Devanagari',sans-serif;cursor:pointer;transition:.2s;
-  }
-  .otp-primary-btn{background:linear-gradient(135deg,var(--blue),var(--azure));color:#fff;box-shadow:0 8px 18px rgba(13,90,167,.22);}
-  .otp-primary-btn:hover{transform:translateY(-1px);filter:brightness(1.04);}
-  .otp-secondary-btn{background:#eef3f8;color:var(--navy);}
-  .otp-secondary-btn:disabled{opacity:.55;cursor:not-allowed;}
-  .otp-countdown{text-align:center;color:var(--ink-soft);font-size:12px;margin-top:8px;}
-  .otp-error{display:none;margin-top:14px;padding:10px 12px;border-radius:10px;background:#fff0f0;color:#b42318;font-size:12.5px;}
-  .otp-error.show{display:block;}
-  .otp-security-note{display:flex;gap:9px;margin-top:20px;padding:12px;border-radius:12px;background:#f5f8fc;color:#566579;font-size:11.5px;line-height:1.55;}
-  .otp-security-note b{color:var(--navy);}
-  .hidden{display:none!important;}
-  .auth-user-tools{display:flex;align-items:center;gap:7px;}
-  .user-mobile-badge{font-size:11px;padding:7px 9px;border-radius:15px;background:rgba(255,255,255,.12);color:#eaf3ff;white-space:nowrap;}
-  .logout-btn{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:18px;padding:7px 10px;font-size:11px;font-weight:700;cursor:pointer;}
-  .logout-btn:hover{background:#c0392b;border-color:#c0392b;}
-
   /* ============ PROFESSIONAL REGISTRATION ============ */
   .registration-modern{max-width:470px!important;padding:26px!important;border:1px solid #e8eef6;animation:regIn .35s ease both;}
   @keyframes regIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
@@ -890,6 +877,83 @@
      reduce casual copying on sensitive UI; Android native builds should use FLAG_SECURE. */
   .sensitive-ui{-webkit-user-select:none;user-select:none;}
 
+
+
+  /* ============ REGISTRATION WELCOME EXPERIENCE ============ */
+  .welcome-card{position:relative;overflow:hidden;margin-top:4px;padding:26px 22px 20px;border-radius:28px;border:1px solid rgba(255,255,255,.72);background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(239,248,255,.78));box-shadow:0 24px 70px rgba(11,61,102,.16),inset 0 1px 0 rgba(255,255,255,.95);text-align:center;isolation:isolate;}
+  .welcome-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(38,157,221,.16),transparent 42%),linear-gradient(120deg,transparent 25%,rgba(255,255,255,.34) 48%,transparent 72%);pointer-events:none;z-index:-1;}
+  .welcome-glow{position:absolute;width:180px;height:180px;border-radius:50%;left:50%;top:-100px;transform:translateX(-50%);background:rgba(40,166,225,.18);filter:blur(25px);z-index:-1;}
+  .ashoka-emblem{width:108px;height:108px;margin:0 auto 13px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(223,240,252,.72));box-shadow:0 15px 38px rgba(13,76,119,.18),inset 0 2px 0 rgba(255,255,255,.95);border:1px solid rgba(30,116,170,.16);animation:chakraFloat 4s ease-in-out infinite;}
+  .ashoka-emblem svg{width:78px;height:78px;overflow:visible;}
+  .chakra-ring{fill:none;stroke:#1769a8;stroke-width:4;}
+  .chakra-center{fill:#1769a8;}
+  .chakra-spokes line{stroke:#1769a8;stroke-width:2.1;stroke-linecap:round;opacity:.9;transform-origin:60px 60px;}
+  @keyframes chakraFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-4px) rotate(1.5deg)}}
+  .welcome-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;background:rgba(18,105,168,.08);border:1px solid rgba(18,105,168,.12);color:#125b8d;font:800 10px 'Poppins',sans-serif;letter-spacing:.7px;}
+  .welcome-card h2{margin:13px 0 7px;font-size:26px;line-height:1.25;color:var(--navy);letter-spacing:-.6px;}
+  .welcome-lead{margin:0 auto 8px;color:#1769a8;font-weight:800;font-size:14px;}
+  .welcome-copy{margin:0 auto;max-width:390px;color:#52677a;font-size:13px;line-height:1.75;}
+  .interest-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;}
+  .interest-btn{min-height:50px;border:0;border-radius:16px;padding:12px;font:800 13px 'Noto Sans Devanagari',sans-serif;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;}
+  .interest-btn:hover{transform:translateY(-2px);}
+  .interest-yes{color:#fff;background:linear-gradient(135deg,#1167a4,#22a7df);box-shadow:0 12px 25px rgba(20,126,185,.23);}
+  .interest-no{color:#18364f;background:rgba(255,255,255,.72);border:1px solid #dce8f1;box-shadow:0 8px 20px rgba(11,61,102,.06);}
+  .interest-result{margin-top:12px;padding:10px 12px;border-radius:13px;background:rgba(18,105,168,.07);color:#175b86;font-size:12px;font-weight:700;animation:regStepIn .3s ease both;}
+  .welcome-principles{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-top:15px;}
+  .welcome-principles span{padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(20,96,142,.10);color:#47647a;font-size:10.5px;font-weight:800;}
+  .welcome-done{margin-top:12px!important;}
+  .welcome-done span{font-size:18px;}
+  @media(max-width:480px){.welcome-card{padding:23px 15px 17px;border-radius:24px}.welcome-card h2{font-size:23px}.interest-actions{grid-template-columns:1fr}.ashoka-emblem{width:98px;height:98px}}
+  @media(prefers-color-scheme:dark){.welcome-card{background:linear-gradient(145deg,rgba(12,32,51,.96),rgba(10,25,41,.88));border-color:rgba(255,255,255,.12);box-shadow:0 24px 70px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08)}.welcome-card h2{color:#f1f8ff}.welcome-copy{color:#a9bfd0}.welcome-lead,.welcome-badge{color:#72d3ff}.welcome-badge{background:rgba(84,215,255,.08);border-color:rgba(84,215,255,.14)}.ashoka-emblem{background:linear-gradient(145deg,rgba(25,51,72,.95),rgba(11,30,48,.88));border-color:rgba(114,211,255,.16)}.chakra-ring,.chakra-center,.chakra-spokes line{stroke:#72d3ff}.chakra-center{fill:#72d3ff}.interest-no{background:rgba(255,255,255,.07);color:#e8f5ff;border-color:rgba(255,255,255,.12)}.welcome-principles span{background:rgba(255,255,255,.06);color:#b9cede;border-color:rgba(255,255,255,.08)}.interest-result{background:rgba(84,215,255,.08);color:#aee6ff}}
+
+  /* ============ iOS 26 INSPIRED BMW517 APP ICON ============ */
+  .bmw-app-icon{
+    position:relative!important;
+    width:48px!important;height:48px!important;
+    border-radius:15px!important;
+    display:grid!important;place-items:center!important;
+    flex:none!important;
+    color:#fff!important;
+    font:800 14px/1 'Poppins',sans-serif!important;
+    letter-spacing:.5px;
+    background:
+      radial-gradient(circle at 30% 18%,rgba(255,255,255,.42),transparent 30%),
+      linear-gradient(145deg,#0b2a52 0%,#1467b7 52%,#35b9f3 100%)!important;
+    border:1px solid rgba(255,255,255,.32)!important;
+    box-shadow:
+      inset 0 1px 1px rgba(255,255,255,.55),
+      inset 0 -8px 18px rgba(0,20,50,.20),
+      0 8px 18px rgba(11,42,82,.22)!important;
+    overflow:hidden;
+  }
+  .bmw-app-icon::before{
+    content:"";
+    position:absolute;inset:1px;border-radius:14px;
+    background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 48%);
+    pointer-events:none;
+  }
+  .bmw-app-icon::after{
+    content:"";
+    position:absolute;width:22px;height:22px;border:2px solid rgba(240,200,90,.95);
+    border-radius:50%;left:50%;top:47%;transform:translate(-50%,-50%);
+    box-shadow:0 0 0 1px rgba(255,255,255,.08);
+  }
+  .bmw-app-icon span{position:relative;z-index:2;margin-top:25px;text-shadow:0 1px 3px rgba(0,0,0,.35);}
+
+  /* Make the main BMW517 mark feel like a native app identity. */
+  .logo .chakra{
+    width:30px;height:30px;border:2.5px solid var(--gold-light);
+    background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.03));
+    box-shadow:inset 0 1px 2px rgba(255,255,255,.25),0 4px 10px rgba(0,0,0,.18);
+  }
+  .logo .chakra::before{height:30px;}
+  .logo .chakra::after{width:30px;}
+
+  @media (prefers-reduced-motion:no-preference){
+    .bmw-app-icon{transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease;}
+    .bmw-app-icon:hover{transform:translateY(-1px) scale(1.035);box-shadow:inset 0 1px 1px rgba(255,255,255,.55),inset 0 -8px 18px rgba(0,20,50,.20),0 12px 24px rgba(11,42,82,.28)!important;}
+  }
+
   /* ============ RESPONSIVE ============ */
   @media (max-width:900px){
     .cards{grid-template-columns:repeat(2,1fr);}
@@ -901,7 +965,6 @@
     .auth-user-tools{margin-left:auto;}
     .user-mobile-badge{display:none;}
     .nav-share-btn{margin-left:0;}
-    .otp-login-card{padding:24px 18px;border-radius:22px;}
     .registration-modern{max-height:92vh!important;padding:22px!important;}
     .navlinks{
       display:none;
@@ -936,58 +999,69 @@
     html{scroll-behavior:auto;}
     *{transition:none !important;animation:none !important;}
   }
+
+/* =========================================================
+   BMW517 PREMIUM STUDENT UI — iOS 26 INSPIRED
+   Original BMW517 design system; existing functionality preserved.
+   ========================================================= */
+:root{
+  --bmw-blue:#0b2a52;--bmw-azure:#1c9fd9;--bmw-cyan:#54d7ff;--bmw-gold:#f0c85a;
+  --glass:rgba(255,255,255,.68);--glass-border:rgba(255,255,255,.72);
+  --shadow-soft:0 16px 45px rgba(11,42,82,.10);--shadow-card:0 10px 32px rgba(11,42,82,.09);
+}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(180deg,#f7fbff 0%,#fff 42%,#f5f9fd 100%);color:#10243d}
+header{position:sticky!important;top:0;z-index:1000;background:rgba(7,30,59,.78)!important;backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 8px 30px rgba(0,0,0,.10)}
+header nav{min-height:70px!important}
+.logo{font-weight:900!important;letter-spacing:.3px;text-shadow:0 2px 18px rgba(84,215,255,.25)}
+.navlinks a{border-radius:14px!important;padding:10px 13px!important;transition:.22s!important}
+.navlinks a:hover{background:rgba(255,255,255,.10);transform:translateY(-1px)}
+.nav-share-btn{border:1px solid rgba(255,255,255,.18)!important;background:rgba(255,255,255,.10)!important;backdrop-filter:blur(12px);border-radius:14px!important}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 15%,rgba(84,215,255,.22),transparent 28%),radial-gradient(circle at 88% 25%,rgba(240,200,90,.14),transparent 25%),linear-gradient(135deg,#061c38,#0b2a52 48%,#0c4778)!important;min-height:620px;display:flex;align-items:center}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.06) 48%,transparent 62%);animation:bmwShine 8s linear infinite;pointer-events:none}
+@keyframes bmwShine{0%{transform:translateX(-70%)}100%{transform:translateX(70%)}}
+.hero-inner{position:relative;z-index:2;max-width:1000px!important}
+.hero h1{font-size:clamp(42px,7vw,78px)!important;line-height:1.03!important;letter-spacing:-2px!important;text-shadow:0 8px 40px rgba(0,0,0,.28)}
+.hero h2{letter-spacing:2px!important;opacity:.88}
+.eyebrow,.eyebrow-line,.hub-kicker{letter-spacing:1.8px!important;font-weight:800!important}
+.buttons .btn,.btn{border-radius:18px!important;min-height:52px;padding:14px 20px!important;box-shadow:0 10px 25px rgba(0,0,0,.10);transition:transform .22s,box-shadow .22s,filter .22s!important}
+.buttons .btn:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.15);filter:saturate(1.08)}
+.section{max-width:1180px;margin:auto}
+.section>h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.8px}
+.section-sub{max-width:760px!important;color:#61728a!important}
+.cards{gap:18px!important}
+.card{border:1px solid rgba(220,231,242,.9)!important;border-radius:24px!important;background:rgba(255,255,255,.78)!important;box-shadow:var(--shadow-card)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:24px!important;transition:transform .25s,box-shadow .25s,border-color .25s!important}
+.card:hover{transform:translateY(-6px)!important;box-shadow:0 20px 48px rgba(11,42,82,.14)!important;border-color:rgba(28,159,217,.30)!important}
+.card .icon{width:54px!important;height:54px!important;border-radius:17px!important;display:grid;place-items:center;background:linear-gradient(145deg,#eef8ff,#fff);box-shadow:inset 0 1px 0 #fff,0 8px 20px rgba(11,42,82,.08);font-size:26px!important}
+.mission,.join,.quiz-box,.rules{border-radius:28px!important;box-shadow:var(--shadow-soft)!important;border:1px solid rgba(220,231,242,.85)!important}
+.mission{background:linear-gradient(145deg,rgba(239,248,255,.95),rgba(255,255,255,.88))!important}
+.quiz-box{background:rgba(255,255,255,.82)!important;backdrop-filter:blur(18px)}
+
+/* Student hub */
+.student-hub{position:relative;overflow:hidden;max-width:1180px;margin:0 auto 24px;padding:30px;border-radius:32px;background:linear-gradient(145deg,#071f3d,#0b3764 58%,#0875a9);color:#fff;box-shadow:0 28px 70px rgba(6,35,70,.22);isolation:isolate}
+.hub-glow{position:absolute;width:420px;height:420px;right:-170px;top:-210px;border-radius:50%;background:rgba(84,215,255,.24);filter:blur(8px);z-index:-1}
+.hub-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.hub-kicker{font-size:11px;color:#8de7ff}
+.hub-top h2{margin:7px 0;font-size:clamp(27px,4vw,40px);letter-spacing:-1px}.hub-top p{margin:0;color:rgba(255,255,255,.72)}
+.hub-avatar{width:72px;height:72px;border-radius:23px;display:grid;place-items:center;font:900 18px Poppins,sans-serif;background:linear-gradient(145deg,rgba(255,255,255,.25),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 1px rgba(255,255,255,.35),0 14px 28px rgba(0,0,0,.18);backdrop-filter:blur(18px)}
+.hub-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}.hub-stats>div{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}.hub-stats strong{display:block;font-size:23px}.hub-stats span{font-size:11px;color:rgba(255,255,255,.68)}
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.hub-card{display:flex;align-items:center;gap:13px;min-height:82px;padding:14px;border-radius:21px;text-decoration:none;color:#fff;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(14px);transition:.25s}.hub-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.15);box-shadow:0 14px 30px rgba(0,0,0,.16)}.hub-icon{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:15px;background:rgba(255,255,255,.13);font-size:23px}.hub-card b{display:block;font-size:14px}.hub-card small{display:block;margin-top:3px;color:rgba(255,255,255,.62);font-size:10.5px}.hub-arrow{margin-left:auto;color:#8de7ff;font-size:20px}.daily-card{margin-top:14px;padding:20px;border-radius:22px;background:linear-gradient(120deg,rgba(240,200,90,.18),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.14)}.daily-badge{font-size:10px;font-weight:900;letter-spacing:1.2px;color:#ffe28c}.daily-card h3{margin:8px 0 4px;font-size:22px}.daily-card p{margin:0;color:rgba(255,255,255,.76);font-size:13px;line-height:1.7}.daily-card a{display:inline-flex;margin-top:12px;color:#fff;font-weight:800;text-decoration:none}.daily-card a span{margin-left:8px}
+
+/* Premium form / modals */
+.modal-overlay{backdrop-filter:blur(14px)!important;background:rgba(2,17,35,.48)!important}.registration-modern,.modal-panel{border:1px solid rgba(255,255,255,.72)!important;border-radius:30px!important;box-shadow:0 30px 90px rgba(0,0,0,.25)!important;background:rgba(255,255,255,.88)!important;backdrop-filter:blur(26px) saturate(140%)!important}.registration-modern input,.registration-modern select{border-radius:16px!important;min-height:50px!important;background:rgba(255,255,255,.72)!important}.reg-field label{font-weight:800!important}.modern-submit,.confirm-submit{border-radius:17px!important;min-height:52px!important;box-shadow:0 12px 25px rgba(28,159,217,.20)}
+
+/* Accessible focus */
+:focus-visible{outline:3px solid rgba(84,215,255,.75)!important;outline-offset:3px!important}
+@media(max-width:768px){
+ .student-hub{margin:0 12px 18px;padding:22px;border-radius:27px}.hub-grid{grid-template-columns:repeat(2,1fr)}.hub-card{min-height:76px;padding:11px}.hub-icon{width:42px;height:42px;font-size:20px}.hub-card small{font-size:9.5px}.hub-stats{gap:8px}.hub-stats>div{padding:11px}.hub-stats strong{font-size:19px}.hero{min-height:570px!important}.hero h1{letter-spacing:-1.5px!important}.section{padding-left:16px!important;padding-right:16px!important}
+}
+@media(max-width:480px){.hub-top p{font-size:12px}.hub-avatar{width:58px;height:58px;border-radius:19px}.hub-grid{grid-template-columns:1fr}.hub-card{min-height:70px}.student-hub{margin-left:10px;margin-right:10px}}
+@media(prefers-color-scheme:dark){body{background:#061321;color:#eaf5ff}.card{background:rgba(13,30,48,.78)!important;border-color:rgba(255,255,255,.10)!important}.section-sub{color:#a9bacb!important}.registration-modern,.modal-panel{background:rgba(10,25,41,.90)!important;color:#eaf5ff}.registration-modern input,.registration-modern select{background:rgba(255,255,255,.07)!important;color:#fff!important;border-color:rgba(255,255,255,.14)!important}.privacy-note,.reg-summary{background:rgba(84,215,255,.08)!important;color:#cdeeff!important;border-color:rgba(84,215,255,.16)!important}}
+
 </style>
 </head>
 
-<body class="auth-locked">
-
-<!-- ============================= -->
-<!-- SECURE MOBILE OTP LOGIN -->
-<!-- ============================= -->
-<div id="otpLoginOverlay" class="otp-login-overlay" aria-modal="true" role="dialog">
-  <div class="otp-login-card">
-    <div class="otp-brand">
-      <div class="otp-brand-mark">💙</div>
-      <div>
-        <strong>BMW517</strong>
-        <span>Secure Mobile Login</span>
-      </div>
-    </div>
-
-    <div class="otp-icon">🔐</div>
-    <h2>Mobile Number से Login करें</h2>
-    <p class="otp-sub">पहले अपना verified mobile number login करें। सही OTP के बाद BMW517 का पूरा content खुलेगा।</p>
-
-    <div id="otpPhonePanel">
-      <label for="otpPhone">Mobile Number</label>
-      <div class="phone-input-wrap">
-        <span>🇮🇳 +91</span>
-        <input id="otpPhone" type="tel" inputmode="numeric" autocomplete="tel"
-               maxlength="10" placeholder="10-digit mobile number" aria-label="Mobile number">
-      </div>
-      <button id="sendOtpBtn" class="otp-primary-btn" type="button">📲 Send OTP</button>
-    </div>
-
-    <div id="otpVerifyPanel" class="hidden">
-      <label for="otpInput">6-digit OTP</label>
-      <input id="otpInput" class="otp-code-input" type="tel" inputmode="numeric"
-             autocomplete="one-time-code" maxlength="6" placeholder="••••••">
-      <button id="verifyOtpBtn" class="otp-primary-btn" type="button">🔐 Verify &amp; Continue</button>
-      <button id="resendOtpBtn" class="otp-secondary-btn" type="button" disabled>OTP फिर भेजें</button>
-      <div id="otpCountdown" class="otp-countdown"></div>
-    </div>
-
-    <div id="otpLoginError" class="otp-error" role="alert"></div>
-    <div id="recaptcha-container"></div>
-
-    <div class="otp-security-note">
-      <span>🛡️</span>
-      <div><b>Secure Login</b><br>OTP authentication Firebase Auth से होता है। OTP/secret keys इस page के JavaScript में store नहीं किए जाते।</div>
-    </div>
-  </div>
-</div>
-
-<div id="appShell" class="app-locked">
+<body>
 
 <!-- ============================= -->
 <!-- REGISTRATION FORM (app khulte hi dikhta hai) -->
@@ -997,7 +1071,7 @@
     <button class="modal-close modern-close" id="regClose" aria-label="बंद करें">&times;</button>
 
     <div class="reg-brand">
-      <div class="reg-brand-icon">💙</div>
+      <div class="reg-brand-icon bmw-app-icon" aria-label="BMW517 app icon"><span>517</span></div>
       <div>
         <span>BMW517</span>
         <small>Jai Bhim Mission Warrior</small>
@@ -1072,11 +1146,35 @@
     </div>
 
     <div id="regSuccessView" class="reg-step hidden">
-      <div class="success-check">✓</div>
-      <h2>Registration Successful</h2>
-      <p>आपकी BMW517 registration जानकारी WhatsApp submission के लिए तैयार है।</p>
-      <div class="success-note">💙 जय भीम • ज्ञान • जागरूकता • समानता</div>
-      <button id="regDoneBtn" type="button" class="modal-submit">Done</button>
+      <div class="welcome-card" id="welcomeCard" role="region" aria-labelledby="welcomeTitle">
+        <div class="welcome-glow"></div>
+        <div class="ashoka-emblem" aria-hidden="true">
+          <svg viewBox="0 0 120 120" role="img" aria-label="Ashoka Chakra">
+            <circle cx="60" cy="60" r="48" class="chakra-ring"></circle>
+            <circle cx="60" cy="60" r="7" class="chakra-center"></circle>
+            <g class="chakra-spokes">
+              <line x1="60" y1="12" x2="60" y2="108"></line><line x1="12" y1="60" x2="108" y2="60"></line>
+              <line x1="26.1" y1="26.1" x2="93.9" y2="93.9"></line><line x1="93.9" y1="26.1" x2="26.1" y2="93.9"></line>
+              <line x1="41.6" y1="14.4" x2="78.4" y2="105.6"></line><line x1="105.6" y1="41.6" x2="14.4" y2="78.4"></line>
+              <line x1="78.4" y1="14.4" x2="41.6" y2="105.6"></line><line x1="105.6" y1="78.4" x2="14.4" y2="41.6"></line>
+              <line x1="14.4" y1="41.6" x2="105.6" y2="78.4"></line><line x1="41.6" y1="105.6" x2="78.4" y2="14.4"></line>
+              <line x1="14.4" y1="78.4" x2="105.6" y2="41.6"></line><line x1="41.6" y1="14.4" x2="78.4" y2="105.6"></line>
+            </g>
+          </svg>
+        </div>
+        <div class="welcome-badge">BMW517 • MISSION WARRIOR</div>
+        <h2 id="welcomeTitle">जय भीम! आपका स्वागत है।</h2>
+        <p class="welcome-lead">Jai Bhim Mission Warrior की ओर से आपका हार्दिक स्वागत है।</p>
+        <p class="welcome-copy">यह मंच ज्ञान, संविधान, समानता और जागरूकता के लिए है। अब बताइए — क्या आप इस मिशन से जुड़कर सीखने और योगदान देने में रुचि रखते हैं?</p>
+
+        <div class="interest-actions" aria-label="मिशन में रुचि का चुनाव">
+          <button type="button" class="interest-btn interest-yes" id="interestYes">✓ हाँ, मुझे रुचि है</button>
+          <button type="button" class="interest-btn interest-no" id="interestNo">अभी नहीं</button>
+        </div>
+        <div class="interest-result hidden" id="interestResult" aria-live="polite"></div>
+        <div class="welcome-principles"><span>☸ समानता</span><span>📚 ज्ञान</span><span>🤝 एकता</span></div>
+      </div>
+      <button id="regDoneBtn" type="button" class="modal-submit welcome-done">Continue to BMW517 <span>→</span></button>
     </div>
   </div>
 </div>
@@ -1100,11 +1198,6 @@
       <a href="#join">Join Mission</a>
       <a href="#rules">नियम</a>
       <a href="#contact">Contact</a>
-    </div>
-
-    <div class="auth-user-tools">
-      <span id="userMobileBadge" class="user-mobile-badge">📱 Verified</span>
-      <button id="logoutBtn" class="logout-btn" type="button">↪ Logout</button>
     </div>
     <button class="nav-share-btn" onclick="openShare()">🔗 Share करें</button>
   </nav>
@@ -1138,6 +1231,79 @@
   </div>
 </section>
 
+
+<!-- ============================= -->
+<!-- REGISTERED MEMBER WELCOME -->
+<!-- ============================= -->
+<section class="home-welcome-section hidden" id="homeWelcomeSection" aria-label="BMW517 Registration Welcome">
+  <div class="home-welcome-inner">
+    <div class="welcome-card home-welcome-card">
+      <div class="welcome-glow"></div>
+      <div class="ashoka-emblem" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="48" class="chakra-ring"></circle>
+          <circle cx="60" cy="60" r="7" class="chakra-center"></circle>
+          <g class="chakra-spokes">
+            <line x1="60" y1="12" x2="60" y2="108"></line>
+            <line x1="12" y1="60" x2="108" y2="60"></line>
+            <line x1="26.1" y1="26.1" x2="93.9" y2="93.9"></line>
+            <line x1="93.9" y1="26.1" x2="26.1" y2="93.9"></line>
+            <line x1="41.6" y1="14.4" x2="78.4" y2="105.6"></line>
+            <line x1="105.6" y1="41.6" x2="14.4" y2="78.4"></line>
+            <line x1="78.4" y1="14.4" x2="41.6" y2="105.6"></line>
+            <line x1="105.6" y1="78.4" x2="14.4" y2="41.6"></line>
+            <line x1="14.4" y1="41.6" x2="105.6" y2="78.4"></line>
+            <line x1="41.6" y1="105.6" x2="78.4" y2="14.4"></line>
+            <line x1="14.4" y1="78.4" x2="105.6" y2="41.6"></line>
+            <line x1="41.6" y1="14.4" x2="78.4" y2="105.6"></line>
+          </g>
+        </svg>
+      </div>
+      <div class="welcome-badge">BMW517 • MISSION WARRIOR</div>
+      <h2 id="homeWelcomeTitle">जय भीम! आपका स्वागत है।</h2>
+      <p class="welcome-lead">Jai Bhim Mission Warrior की ओर से आपका हार्दिक स्वागत है।</p>
+      <div class="home-welcome-success">✓ आपका BMW517 Registration सफलतापूर्वक पूरा हो गया है।</div>
+      <p class="welcome-copy">यह मंच ज्ञान, संविधान, समानता और जागरूकता के लिए है। अब आप इस मिशन से जुड़कर सीखने, समझने और सकारात्मक योगदान देने की यात्रा शुरू कर सकते हैं।</p>
+      <div class="welcome-principles">
+        <span>☸ समानता</span><span>📚 ज्ञान</span><span>🤝 एकता</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- BMW517 STUDENT COMMAND CENTER -->
+<!-- ============================= -->
+<section class="student-hub" id="student-hub">
+  <div class="hub-glow"></div>
+  <div class="hub-top">
+    <div>
+      <span class="hub-kicker">BMW517 • STUDENT HUB</span>
+      <h2>आज क्या सीखेंगे? <span>💙</span></h2>
+      <p>ज्ञान बढ़ाएँ, क्विज़ खेलें और अपनी learning journey आगे बढ़ाएँ।</p>
+    </div>
+    <div class="hub-avatar" aria-hidden="true">517</div>
+  </div>
+  <div class="hub-stats">
+    <div><strong>01</strong><span>Day Streak 🔥</span></div>
+    <div><strong>0%</strong><span>Learning Progress</span></div>
+    <div><strong>0</strong><span>Badges 🎖️</span></div>
+  </div>
+  <div class="hub-grid">
+    <a class="hub-card hub-feature" href="#knowledge"><span class="hub-icon">📚</span><div><b>Learn</b><small>Constitution &amp; Knowledge</small></div><span class="hub-arrow">→</span></a>
+    <a class="hub-card" href="#quiz"><span class="hub-icon">🎯</span><div><b>Daily Challenge</b><small>आज के 5 सवाल</small></div><span class="hub-arrow">→</span></a>
+    <a class="hub-card" href="#knowledge"><span class="hub-icon">🇮🇳</span><div><b>Constitution</b><small>Articles &amp; Rights</small></div><span class="hub-arrow">→</span></a>
+    <a class="hub-card" href="#gallery"><span class="hub-icon">🏆</span><div><b>Achievements</b><small>Badges &amp; milestones</small></div><span class="hub-arrow">→</span></a>
+    <a class="hub-card" href="#join"><span class="hub-icon">🤝</span><div><b>Community</b><small>Mission से जुड़ें</small></div><span class="hub-arrow">→</span></a>
+    <a class="hub-card" href="#quiz"><span class="hub-icon">📈</span><div><b>My Progress</b><small>अपनी learning देखें</small></div><span class="hub-arrow">→</span></a>
+  </div>
+  <div class="daily-card">
+    <div class="daily-badge">💡 TODAY'S KNOWLEDGE</div>
+    <h3>अनुच्छेद 17</h3>
+    <p>संविधान अस्पृश्यता को समाप्त करता है और उसके किसी भी रूप को दंडनीय बनाता है।</p>
+    <a href="#knowledge">और सीखें <span>→</span></a>
+  </div>
+</section>
 
 <!-- ============================= -->
 <!-- MISSION -->
@@ -1450,7 +1616,16 @@
     <a href="https://chat.whatsapp.com/IOPxI1w3tJNExWZa3QGkdR?s=cl&p=a&ilr=0" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
     <a href="https://www.instagram.com/bmw517_official?igsh=MXRoN3hjbW1tOWVneA==" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
     <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener" aria-label="Facebook">👍</a>
-    <a href="javascript:void(0)" onclick="openShare()" aria-label="Website Share करें">🔗</a>
+    <a href="#" onclick="event.preventDefault();openShare();" aria-label="Website Share करें" title="Share करें">
+  <span class="share-glass-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" width="19" height="19">
+      <circle cx="18" cy="5" r="2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="6" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18" cy="19" r="2" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 11l8-5M8 13l8 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </span>
+</a>
   </div>
 
   <p class="fine">© 2026 Jai Bhim Mission Warrior. All Rights Reserved.</p>
@@ -1459,7 +1634,16 @@
 <!-- ============================= -->
 <!-- FLOATING SHARE BUTTON -->
 <!-- ============================= -->
-<button class="fab-share" onclick="openShare()" aria-label="Website Share करें">🔗</button>
+<button class="fab-share" id="fabShareBtn" type="button" aria-label="Website Share करें" title="Share करें">
+  <span class="share-glass-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none">
+      <circle cx="18" cy="5" r="2.2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="6" cy="12" r="2.2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18" cy="19" r="2.2" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 11l7.8-4.6M8 13l7.8 4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </span>
+</button>
 
 <!-- ============================= -->
 <!-- SHARE MODAL -->
@@ -1482,7 +1666,7 @@
         <span class="so-icon">📷</span> Instagram
       </button>
       <button class="share-opt so-native" id="shareNative" type="button" style="display:none;">
-        <span class="so-icon">📤</span> और Apps
+        <span class="so-icon">📤</span> फोन के Apps
       </button>
     </div>
 
@@ -1500,193 +1684,9 @@
 <!-- ============================= -->
 <!-- SCRIPTS -->
 <!-- ============================= -->
-<script type="module">
-  /* BMW517 Secure Mobile OTP Login — Firebase Phone Authentication */
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-  import {
-    getAuth, RecaptchaVerifier, signInWithPhoneNumber,
-    onAuthStateChanged, setPersistence, browserLocalPersistence, signOut
-  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
-
-  /*
-    IMPORTANT:
-    Replace the values below with your Firebase Web App configuration.
-    Firebase Web API keys are identifiers, not server secrets. Never put
-    service-account private keys, Twilio secrets, etc. in this HTML.
-  */
-  const BMW517_FIREBASE_CONFIG = {
-    apiKey: "AIzaSyAFTTQZGAjCcLToTT6SZ_8ZaB0ZkvAJjcE",
-    authDomain: "bmw517-cc091.firebaseapp.com",
-    projectId: "bmw517-cc091",
-    storageBucket: "bmw517-cc091.firebasestorage.app",
-    messagingSenderId: "101259876861",
-    appId: "1:101259876861:web:3583037936e25ab91b2194"
-  };
-
-  const BMW517_AUTH_READY = Object.values(BMW517_FIREBASE_CONFIG)
-    .every(v => v && !String(v).startsWith("REPLACE_WITH_"));
-
-  window.BMW517_AUTH = { configured: BMW517_AUTH_READY, firebaseReady: false };
-
-  if (BMW517_AUTH_READY) {
-    try {
-      const app = initializeApp(BMW517_FIREBASE_CONFIG);
-      const auth = getAuth(app);
-      window.BMW517_AUTH.auth = auth;
-      await setPersistence(auth, browserLocalPersistence);
-
-      const loginOverlay = document.getElementById('otpLoginOverlay');
-      const appShell = document.getElementById('appShell');
-      const loginError = document.getElementById('otpLoginError');
-      const loginPhone = document.getElementById('otpPhone');
-      const otpPanel = document.getElementById('otpVerifyPanel');
-      const phonePanel = document.getElementById('otpPhonePanel');
-      const otpInput = document.getElementById('otpInput');
-      const sendOtpBtn = document.getElementById('sendOtpBtn');
-      const verifyOtpBtn = document.getElementById('verifyOtpBtn');
-      const resendOtpBtn = document.getElementById('resendOtpBtn');
-      const otpCountdown = document.getElementById('otpCountdown');
-      const userMobileBadge = document.getElementById('userMobileBadge');
-      const logoutBtn = document.getElementById('logoutBtn');
-
-      let confirmationResult = null;
-      let recaptchaVerifier = null;
-      let resendTimer = null;
-
-      const showLoginError = (msg) => {
-        loginError.textContent = msg;
-        loginError.classList.add('show');
-      };
-      const clearLoginError = () => loginError.classList.remove('show');
-
-      function normalizePhone(value) {
-        const digits = value.replace(/\D/g, '').slice(0,10);
-        loginPhone.value = digits;
-        return digits;
-      }
-
-      function startResendCountdown(seconds = 30) {
-        clearInterval(resendTimer);
-        let remaining = seconds;
-        otpCountdown.textContent = `OTP फिर भेजें (${remaining}s)`;
-        resendOtpBtn.disabled = true;
-        resendTimer = setInterval(() => {
-          remaining -= 1;
-          if (remaining <= 0) {
-            clearInterval(resendTimer);
-            resendOtpBtn.disabled = false;
-            otpCountdown.textContent = 'OTP फिर भेजें';
-          } else {
-            otpCountdown.textContent = `OTP फिर भेजें (${remaining}s)`;
-          }
-        }, 1000);
-      }
-
-      function initRecaptcha() {
-        if (recaptchaVerifier) return;
-        recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
-          size: 'invisible'
-        });
-      }
-
-      async function sendOtp() {
-        clearLoginError();
-        const mobile = normalizePhone(loginPhone.value);
-        if (!/^[6-9]\d{9}$/.test(mobile)) {
-          showLoginError('कृपया सही 10-digit Indian mobile number डालें।');
-          loginPhone.focus();
-          return;
-        }
-
-        sendOtpBtn.disabled = true;
-        sendOtpBtn.innerHTML = '⏳ OTP भेजा जा रहा है...';
-        try {
-          initRecaptcha();
-          confirmationResult = await signInWithPhoneNumber(auth, '+91' + mobile, recaptchaVerifier);
-          phonePanel.classList.add('hidden');
-          otpPanel.classList.remove('hidden');
-          otpInput.focus();
-          startResendCountdown();
-        } catch (error) {
-          console.error(error);
-          if (recaptchaVerifier) {
-            try { recaptchaVerifier.clear(); } catch (_) {}
-            recaptchaVerifier = null;
-          }
-          showLoginError('OTP भेजने में समस्या हुई। कृपया नंबर जाँचकर फिर प्रयास करें।');
-        } finally {
-          sendOtpBtn.disabled = false;
-          sendOtpBtn.innerHTML = '📲 Send OTP';
-        }
-      }
-
-      async function verifyOtp() {
-        clearLoginError();
-        const otp = otpInput.value.trim();
-        if (!/^\d{6}$/.test(otp)) {
-          showLoginError('कृपया 6-digit OTP डालें।');
-          return;
-        }
-        verifyOtpBtn.disabled = true;
-        verifyOtpBtn.innerHTML = '⏳ Verify हो रहा है...';
-        try {
-          await confirmationResult.confirm(otp);
-          otpInput.value = '';
-        } catch (error) {
-          console.error(error);
-          showLoginError('OTP गलत है या expire हो गया है। सही OTP डालें या Resend OTP करें।');
-        } finally {
-          verifyOtpBtn.disabled = false;
-          verifyOtpBtn.innerHTML = '🔐 Verify & Continue';
-        }
-      }
-
-      async function resendOtp() {
-        otpPanel.classList.add('hidden');
-        phonePanel.classList.remove('hidden');
-        clearLoginError();
-        otpInput.value = '';
-        await sendOtp();
-      }
-
-      sendOtpBtn.addEventListener('click', sendOtp);
-      verifyOtpBtn.addEventListener('click', verifyOtp);
-      resendOtpBtn.addEventListener('click', resendOtp);
-      loginPhone.addEventListener('input', () => normalizePhone(loginPhone.value));
-      otpInput.addEventListener('input', () => { otpInput.value = otpInput.value.replace(/\D/g,'').slice(0,6); });
-      logoutBtn.addEventListener('click', async () => { await signOut(auth); });
-
-      onAuthStateChanged(auth, (user) => {
-        window.BMW517_AUTH.user = user || null;
-        if (user) {
-          const digits = (user.phoneNumber || '').replace(/^\+91/, '');
-          userMobileBadge.textContent = digits ? `📱 +91 ${digits}` : '📱 Verified';
-          loginOverlay.classList.add('hidden');
-          appShell.classList.remove('app-locked'); appShell.classList.add('auth-ready');
-          document.body.classList.remove('auth-locked');
-        } else {
-          loginOverlay.classList.remove('hidden');
-          appShell.classList.add('app-locked');
-          document.body.classList.add('auth-locked');
-          phonePanel.classList.remove('hidden');
-          otpPanel.classList.add('hidden');
-        }
-      });
-      window.BMW517_AUTH.firebaseReady = true;
-    } catch (error) {
-      console.error('Firebase initialization failed:', error);
-      window.BMW517_AUTH.firebaseInitError = true;
-    }
-  }
-
-  if (!BMW517_AUTH_READY) {
-    window.addEventListener('DOMContentLoaded', () => {
-      const err = document.getElementById('otpLoginError');
-      err.textContent = 'Secure OTP Login अभी configured नहीं है। Firebase Console की Web App configuration इस file में सेट करें।';
-      err.classList.add('show');
-      document.getElementById('sendOtpBtn').disabled = true;
-    });
-  }
+<script>
+  /* BMW517 website — OTP/Firebase login removed.
+     The website now opens directly and the existing registration form remains unchanged. */
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -1694,16 +1694,15 @@
     });
   }
 
-
   /* ---- Web privacy deterrents ---- */
   document.addEventListener('contextmenu', e => {
-    if (e.target.closest('.otp-login-overlay,.registration-modern')) e.preventDefault();
+    if (e.target.closest('.registration-modern')) e.preventDefault();
   });
   document.addEventListener('dragstart', e => {
-    if (e.target.closest('.otp-login-overlay,.registration-modern')) e.preventDefault();
+    if (e.target.closest('.registration-modern')) e.preventDefault();
   });
   document.addEventListener('visibilitychange', () => {
-    const sensitive = document.querySelector('.otp-login-overlay:not(.hidden), #regModal[style*="flex"]');
+    const sensitive = document.querySelector('#regModal[style*="flex"]');
     if (sensitive && document.visibilityState === 'hidden') {
       document.body.classList.add('sensitive-ui');
     } else {
@@ -1804,7 +1803,35 @@
   }
   regClose.addEventListener('click', closeRegModal);
   regSkip.addEventListener('click', closeRegModal);
-  regDoneBtn.addEventListener('click', closeRegModal);
+
+  /* ---- Welcome + mission interest after successful registration ---- */
+  const interestYes = document.getElementById('interestYes');
+  const interestNo = document.getElementById('interestNo');
+  const interestResult = document.getElementById('interestResult');
+
+  function saveMissionInterest(answer){
+    try{
+      localStorage.setItem('BMW517_MISSION_INTEREST', answer);
+      localStorage.setItem('BMW517_REGISTERED', 'true');
+    }catch(e){}
+    interestResult.classList.remove('hidden');
+    if(answer === 'yes'){
+      interestResult.textContent = '💙 बहुत अच्छा! आपका स्वागत है — आइए साथ मिलकर ज्ञान, समानता और जागरूकता का संदेश आगे बढ़ाएँ।';
+      interestYes.classList.add('selected');
+      interestNo.classList.remove('selected');
+    }else{
+      interestResult.textContent = '🙏 कोई बात नहीं। आप जब चाहें BMW517 Mission Warrior से जुड़ सकते हैं।';
+      interestNo.classList.add('selected');
+      interestYes.classList.remove('selected');
+    }
+  }
+  interestYes.addEventListener('click', () => saveMissionInterest('yes'));
+  interestNo.addEventListener('click', () => saveMissionInterest('no'));
+
+  regDoneBtn.addEventListener('click', () => {
+    closeRegModal();
+    showHomeWelcome(true);
+  });
 
   regForm.addEventListener('submit', function(e){
     e.preventDefault();
@@ -1857,6 +1884,7 @@
     const waUrl = "https://wa.me/" + ADMIN_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
     window.open(waUrl, "_blank", "noopener,noreferrer");
 
+    markBMW517Registered();
     regConfirmView.classList.add('hidden');
     regSuccessView.classList.remove('hidden');
   });
@@ -1870,6 +1898,43 @@
   regModal.addEventListener('click', e => {
     if(e.target === regModal) closeRegModal();
   });
+
+
+  /* ---- Registration Welcome on Home ---- */
+  const homeWelcomeSection = document.getElementById('homeWelcomeSection');
+  const homeWelcomeTitle = document.getElementById('homeWelcomeTitle');
+
+  function showHomeWelcome(scrollToCard=false){
+    if (!homeWelcomeSection) return;
+    let registered = false;
+    let savedName = '';
+    try {
+      registered = localStorage.getItem('BMW517_REGISTERED') === 'true';
+      savedName = localStorage.getItem('BMW517_REGISTERED_NAME') || '';
+    } catch(e) {}
+
+    if (!registered) return;
+    homeWelcomeSection.classList.remove('hidden');
+
+    if (homeWelcomeTitle && savedName) {
+      homeWelcomeTitle.textContent = 'जय भीम! ' + savedName + ' जी, आपका स्वागत है।';
+    }
+
+    if (scrollToCard) {
+      setTimeout(() => {
+        homeWelcomeSection.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 120);
+    }
+  }
+
+  function markBMW517Registered(){
+    try {
+      localStorage.setItem('BMW517_REGISTERED', 'true');
+      localStorage.setItem('BMW517_REGISTERED_NAME', document.getElementById('regName').value.trim());
+    } catch(e) {}
+  }
+
+  showHomeWelcome(false);
 
   /* ---- Quiz (10 questions, dynamically rendered) ---- */
   const quizData = [
@@ -1932,59 +1997,123 @@
     result.textContent = '';
   }
 
-  /* ---- Share Website ---- */
-  const siteUrl = window.location.href;
+  /* ---- Share Website — robust Android/Web + glass UI ---- */
+  const siteUrl = 'https://rajaranjan001-ux.github.io/jaibhimmissionwarrior/';
   const siteTitle = document.title;
   const siteDesc = "Jai Bhim Mission Warrior (BMW517) - संविधान, ज्ञान और सामाजिक जागरूकता का मंच। जुड़ें और ज्ञान फैलाएं।";
   const shareText = siteTitle + " - " + siteDesc;
 
-  document.getElementById('shareLinkInput').value = siteUrl;
-  document.getElementById('shareWhatsapp').href = "https://wa.me/?text=" + encodeURIComponent(shareText + "\n" + siteUrl);
-  document.getElementById('shareFacebook').href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(siteUrl);
-
-  document.getElementById('shareInstagram').addEventListener('click', function(){
-    copyShareLink();
-    showToast("Link copy हो गया — अब Instagram में Story/DM में paste करें 📷");
-    window.open("https://www.instagram.com/", "_blank", "noopener");
-  });
-
+  const shareLinkInput = document.getElementById('shareLinkInput');
+  const shareWhatsapp = document.getElementById('shareWhatsapp');
+  const shareFacebook = document.getElementById('shareFacebook');
+  const shareInstagram = document.getElementById('shareInstagram');
   const nativeShareBtn = document.getElementById('shareNative');
-  if (navigator.share) {
-    nativeShareBtn.style.display = 'flex';
-    nativeShareBtn.addEventListener('click', function(){
-      navigator.share({ title: siteTitle, text: siteDesc, url: siteUrl }).catch(()=>{});
+  const fabShareBtn = document.getElementById('fabShareBtn');
+
+  if (shareLinkInput) shareLinkInput.value = siteUrl;
+  const whatsappShareUrl = "https://wa.me/?text=" + encodeURIComponent(shareText + "\n" + siteUrl);
+  const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(siteUrl);
+
+  if (shareWhatsapp) {
+    shareWhatsapp.removeAttribute('target');
+    shareWhatsapp.removeAttribute('rel');
+    shareWhatsapp.href = whatsappShareUrl;
+    shareWhatsapp.addEventListener('click', function(e){
+      e.preventDefault();
+      window.location.href = whatsappShareUrl;
     });
   }
 
-  function openShare(){ openModal('shareBox'); }
+  if (shareFacebook) {
+    shareFacebook.removeAttribute('target');
+    shareFacebook.removeAttribute('rel');
+    shareFacebook.href = facebookShareUrl;
+    shareFacebook.addEventListener('click', function(e){
+      e.preventDefault();
+      window.location.href = facebookShareUrl;
+    });
+  }
 
-  function copyShareLink(){
+  if (shareInstagram) {
+    shareInstagram.addEventListener('click', async function(){
+      await copyShareLink(true);
+      showToast('Link copy हो गया ✅ Instagram खोल रहे हैं…');
+      setTimeout(() => {
+        window.location.href = "https://www.instagram.com/";
+      }, 250);
+    });
+  }
+
+  if (nativeShareBtn) {
+    nativeShareBtn.style.display = 'flex';
+    nativeShareBtn.addEventListener('click', async function(){
+      if (navigator.share) {
+        try {
+          await navigator.share({title: siteTitle, text: siteDesc, url: siteUrl});
+          showToast('Share हो गया ✅');
+        } catch(err) {
+          if (!err || err.name !== 'AbortError') showToast('Share नहीं हुआ — Link Copy करें');
+        }
+      } else {
+        await copyShareLink(true);
+        showToast('Share sheet उपलब्ध नहीं है — Link copy हो गया ✅');
+      }
+    });
+  }
+
+  if (fabShareBtn) fabShareBtn.addEventListener('click', openShare);
+
+  function openShare(){
+    const box = document.getElementById('shareBox');
+    if (!box) return;
+    if (typeof openModal === 'function') openModal('shareBox');
+    else { box.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    if (shareLinkInput) shareLinkInput.value = siteUrl;
+  }
+
+  async function copyShareLink(silent=false){
     const input = document.getElementById('shareLinkInput');
     const btn = document.getElementById('copyLinkBtn');
+    const url = siteUrl;
 
     function markCopied(){
-      btn.textContent = '✅ Copied';
-      btn.classList.add('copied');
-      showToast('Link copy हो गया ✅');
-      setTimeout(()=>{ btn.textContent = '📋 Copy'; btn.classList.remove('copied'); }, 2000);
+      if (btn) {
+        btn.textContent = '✅ Copied';
+        btn.classList.add('copied');
+        setTimeout(()=>{ btn.textContent = '📋 Copy'; btn.classList.remove('copied'); }, 2000);
+      }
+      if (!silent) showToast('Link copy हो गया ✅');
     }
 
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(siteUrl).then(markCopied).catch(()=>{
-        input.select(); document.execCommand('copy'); markCopied();
-      });
-    } else {
-      input.select();
-      document.execCommand('copy');
-      markCopied();
-    }
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(url);
+        markCopied();
+        return true;
+      }
+    } catch(e){}
+
+    try {
+      if (input) {
+        input.value = url;
+        input.focus();
+        input.select();
+        input.setSelectionRange(0, input.value.length);
+        if (document.execCommand('copy')) { markCopied(); return true; }
+      }
+    } catch(e){}
+
+    if (!silent) showToast('Copy नहीं हुआ — Link को दबाकर Copy करें');
+    return false;
   }
 
   function showToast(msg){
     const toast = document.getElementById('shareToast');
+    if (!toast) return;
     toast.textContent = msg;
     toast.classList.add('show');
-    setTimeout(()=> toast.classList.remove('show'), 2600);
+    clearTimeout(window.__bmwShareToastTimer);
+    window.__bmwShareToastTimer = setTimeout(()=> toast.classList.remove('show'), 2600);
   }
 
   /* ================================================= */
